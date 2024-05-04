@@ -74,7 +74,7 @@ function animate() {
 	})
 	c.restore()
 
-	radians += 0.0003
+	radians += 0.00009
 
 }
 
