@@ -1,0 +1,129 @@
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main section:first-child {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 70px;
+}
+main section:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#me {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: start;
+}
+#me h1 {
+    margin: 0;
+    font-size: 6em;
+}
+#me h2 {
+    margin: 0;
+    font-size: 4em;
+}
+#me p {
+    font-size: 2em;
+}
+#me img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+#socials {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+#socials img {
+    width: 75px;
+    height: 75px;
+    /*border-radius: 50%;*/
+}
+#carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    overflow-x: hidden;
+    padding: 10px 0;
+}
+#carousel aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+#carousel:hover aside {
+    opacity: 1;
+}
+#carousel h3 {
+    font-size: 2em;
+}
+#carousel button {
+    font-size: 2em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 2;
+    color: white;
+}
+#carousel ul {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin: 0;
+    padding: 0 10px;
+}
+.passion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(10, 10, 10, 1);
+
+    border: white 2px solid;
+    border-radius: 10px 30px 10px 30px;
+    transition: 0.5s;
+    opacity: 0;
+
+    z-index: -1;
+}
+.passion p {
+    text-align: justify;
+    margin: 10px 20px;
+}
+.active {
+
+    opacity: 1;
+    z-index: 1;
+
+}
+#carousel + footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+#carousel + footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#carousel + footer li {
+    list-style-type: none;
+}
