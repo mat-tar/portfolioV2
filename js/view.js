@@ -5,6 +5,12 @@ const view = {
 	passions: document.getElementsByClassName('passion'),
 	dots: document.getElementsByClassName('dot'),
 
+	carouselComplements: document.getElementById('carousel-complements'),
+	complementsActive: document.getElementsByClassName('complementActive'),
+	complements: document.getElementsByClassName('complement'),
+
+	navBar: document.querySelector('nav'),
+
 	canvas: document.querySelector('canvas')
 }
 
