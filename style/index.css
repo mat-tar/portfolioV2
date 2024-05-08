@@ -42,7 +42,7 @@
     animation: none;
 }
 #hero h1:before {
-    content: "👋 Salut, c'est ";
+    content: "\1F44B Salut, c'est ";
     position: absolute;
     left: -150px;
     opacity: 0;
