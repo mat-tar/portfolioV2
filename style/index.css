@@ -3,6 +3,7 @@
     --background: #F7F7F8;
     --blue: rgb(123, 211, 234);
     --transparent-blue: rgb(123, 211, 234, 0.5);
+    --yellow: rgb(249, 250, 171);
 }
 
 /*Body*/
@@ -11,6 +12,7 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     background-color: var(--background);
 }
 /*Common*/
@@ -21,7 +23,7 @@ h2 {
     font-size: 2em;
 }
 h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 /*Page wrapper*/
 #pageWrapper {
@@ -39,16 +41,17 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 12px 0;
+    width: 100%;
     border-radius: 100px;
     background-color: white;
     box-shadow: 0 4px 2px -4px gray;
+    z-index: 100;
     transition: 0.3s;
 }
 .scrolled {
     position: fixed;
     top: 0;
-    max-width: 90vw;
-    min-width: 80vw;
+    width: 100%;
     border-radius: 0 0 25px 25px;
     transition: 0.3s;
 }
@@ -85,7 +88,7 @@ nav ul a:hover:before {
 }
 /*Hero*/
 #hero {
-    height: 100vh;
+    height: 90vh;
 }
 #hero article {
     justify-content: center;
@@ -140,6 +143,9 @@ nav ul a:hover:before {
     margin: 0;
     padding-left: 7px;
 }
+#carousel-complements li {
+    white-space: nowrap;
+}
 .complement {
     position: absolute;
     transition: 0.5s;
@@ -147,6 +153,79 @@ nav ul a:hover:before {
     z-index: -1;
 }
 .complementActive {
+    opacity: 1;
+    z-index: 1;
+}
+/*Projects*/
+#projects {
+    min-height: 90vh;
+    /*align-items: center;*/
+}
+#projects footer ul {
+    padding: 0;
+    gap: 10px;
+}
+#carousel-projects {
+    justify-content: center;
+}
+#carousel-projects aside button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    color: black;
+}
+#carousel-projects > ul {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.project {
+    position: absolute;
+    align-items: center;
+    justify-content: start;
+    width: 700px;
+    height: 700px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 2px -4px gray;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 1;
+}
+.project h3 {
+    margin: 0;
+    padding: 10px 20px;
+}
+.project img {
+    display: block;
+    max-width:100%;
+    width: auto;
+    height: auto;
+    border-radius: 25px 25px 0 0;
+}
+.project ul {
+    padding: 0;
+}
+.details {
+    gap: 10px;
+}
+.details li{
+    font-size: 1.3em;
+}
+.details li span {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+.project p {
+    text-align: justify;
+    max-width: 600px;
+}
+.project-active {
     opacity: 1;
     z-index: 1;
 }

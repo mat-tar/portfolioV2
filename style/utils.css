@@ -26,3 +26,16 @@
 .button:hover {
     background-color: rgb(249, 250, 171, 0.5);
 }
+.no-decoration {
+    text-decoration: none;
+    color: black;
+}
+.tech li {
+    margin: 10px;
+    padding: 8px;
+    border-radius: 100px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: rgb(123, 211, 234);
+    transition: 0.3s;
+}
