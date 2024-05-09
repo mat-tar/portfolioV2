@@ -1,31 +1,82 @@
-#hero {
-    display: flex;
-    justify-content: center;
-    height: 90vh;
-
+/*Body*/
+body {
+    font-family: Arial, sans-serif;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F7F8;
 }
-#me {
-    display: flex;
-    flex-direction: column;
+/*Common*/
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+/*Page wrapper*/
+#pageWrapper {
+    max-width: 90vw;
+    min-width: 80vw;
+    height: 100%;
+}
+/*Header*/
+header {
+    height: 100px;
+    margin-top: 30px;
+}
+/*Navigation*/
+nav {
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 0 4px 2px -4px gray;
+    transition: 0.3s;
+}
+.scrolled {
+    position: fixed;
+    top: 0;
+    max-width: 90vw;
+    min-width: 80vw;
+    border-radius: 0 0 25px 25px;
+    transition: 0.3s;
+}
+nav div > a  {
+    margin-left: 10px;
+}
+nav > a {
+    margin-right: 10px;
+}
+nav ul {
+    gap: 50px;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+/*Hero*/
+#hero {
+    height: 100vh;
+}
+#hero article {
     justify-content: center;
     align-items: start;
     width: 560px;
 }
-#me > div {
-    display: flex;
-    flex-direction: row;
-}
 #hero h1 {
+    position: relative;
     margin: 0;
     padding: 10px 20px;
     border-radius: 25px;
-    font-size: 2.5em;
-
-
     background-color: rgb(123, 211, 234);
-    transition: 0.5s;
-    position: relative;
     animation: jiggle 5s infinite reverse;
+    transition: 0.5s;
 }
 @keyframes jiggle {
     0% { transform: translateX(0); }
@@ -36,138 +87,35 @@
     25% { transform: translateX(0); }
 }
 #hero h1:hover {
-    background-color: rgb(123, 211, 234, 0.5);
     padding-left: 280px;
-    transition: 0.5s;
+    background-color: rgb(123, 211, 234, 0.5);
     animation: none;
+    transition: 0.5s;
 }
 #hero h1:before {
     font-family: "Noto Color Emoji", Arial, sans-serif;
-    content: "\1F44B Salut, c'est ";
     position: absolute;
+    visibility: hidden;
+    content: "\1F44B Salut, c'est ";
     left: -150px;
     opacity: 0;
-    transition: 0.5s;
     width: 280px;
+    transition: 0.5s;
 }
 #hero h1:hover:before {
     left: 10px;
     opacity: 1;
+    visibility: visible;
     transition: 0.5s;
 }
-
-#hero h1:hover {
-    animation: none;
-}
-
-#hero h3 {
-    font-size: 1.5em;
-}
-#me p {
-    font-size: 1em;
-}
-#socials {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
-#socials img {
-    width: 75px;
-    height: 75px;
-    /*border-radius: 50%;*/
-}
-#carousel {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    justify-content: center;
-    overflow-x: hidden;
-    padding: 10px 0;
-}
-#carousel aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    opacity: 0;
-}
-#carousel:hover aside {
-    opacity: 1;
-}
-#carousel h3 {
-    font-size: 2em;
-}
-#carousel button {
-    font-size: 2em;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    z-index: 2;
-}
-#carousel ul {
-    position: relative;
-    width: 400px;
-    height: 600px;
-    margin: 0;
-    padding: 0 10px;
-}
-.passion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-
-    border: black 2px solid;
-    border-radius: 10px 30px 10px 30px;
-    transition: 0.5s;
-    opacity: 0;
-
-    z-index: -1;
-}
-.passion p {
-    text-align: justify;
-    margin: 10px 20px;
-}
-.active {
-
-    opacity: 1;
-    z-index: 1;
-
-}
-#carousel + footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 50px;
-}
-#carousel + footer ul {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-#carousel + footer li {
-    list-style-type: none;
-}
-
-
-
 #carousel-complements {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-
 }
 #carousel-complements ul {
     position: relative;
     width: 400px;
     margin: 0;
     padding-left: 7px;
-}
-#carousel-complements li {
-    list-style: none;
 }
 .complement {
     position: absolute;
@@ -179,4 +127,3 @@
     opacity: 1;
     z-index: 1;
 }
-

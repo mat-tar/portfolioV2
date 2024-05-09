@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/utils.css">
     <link rel="stylesheet" href="./style/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
-<div id="pageWrapper">
+<body class="flex-col">
+<div id="pageWrapper" class="flex-col">
     <header>
-        <nav>
-            <div>
+        <nav class="flex-row">
+            <div class="flex-row center">
                 <a href="index.html" class="material-icons button house">home</a>
-                <ul>
+                <ul class="flex-row no-bullets">
                     <li><a href="index.html">Mes Projets</a></li>
                     <li><a href="index.html">Mon Parcours</a></li>
                     <li><a href="index.html">Moi</a></li>
@@ -26,13 +26,13 @@
         </nav>
     </header>
     <main>
-        <section id="hero">
-            <article id="me">
+        <section id="hero" class="flex-col center">
+            <article class="flex-col">
                     <h1>Mathéo Tardy</h1>
-                    <div>
+                    <div class="flex-row">
                         <h3>Je suis</h3>
-                        <div id="carousel-complements">
-                            <ul>
+                        <div id="carousel-complements" class="flex-row">
+                            <ul class="no-bullets">
                                 <li class="complement complementActive">
                                     <h3>un étudiant en BUT informatique</h3>
                                 </li>
@@ -49,53 +49,6 @@
                         </div>
                     </div>
             </article>
-            <!--<div>
-                <h2>Mes passions</h2>
-                <article id="carousel">
-                    <aside>
-                        <button id="prev">&#10096;</button>
-                    </aside>
-                    <ul>
-                        <li class="passion active">
-                            <h3>Escalade</h3>
-                            <img src="https://placehold.co/200" alt="Escalade">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus et ex hic id
-                                incidunt
-                                inventore, itaque laudantium minus molestias nihil nobis perferendis repellat sed tempore
-                                temporibus ut
-                                vero voluptatem.</p>
-                        </li>
-                        <li class="passion">
-                            <h3>Nouvelles technologies</h3>
-                            <img src="https://placehold.co/200" alt="Escalade">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus et ex hic id
-                                incidunt
-                                inventore, itaque laudantium minus molestias nihil nobis perferendis repellat sed tempore
-                                temporibus ut
-                                vero voluptatem.</p>
-                        </li>
-                        <li class="passion">
-                            <h3>Espace</h3>
-                            <img src="https://placehold.co/200" alt="Escalade">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus et ex hic id
-                                incidunt
-                                inventore, itaque laudantium minus molestias nihil nobis perferendis repellat sed tempore
-                                temporibus ut
-                                vero voluptatem.</p>
-                        </li>
-                    </ul>
-                    <aside>
-                        <button id="next">&#10097;</button>
-                    </aside>
-                </article>
-                <footer>
-                    <ul>
-                        <li class="dot">&#9679;</li>
-                        <li class="dot">&#9675;</li>
-                        <li class="dot">&#9675;</li>
-                    </ul>
-                </footer>
-            </div>-->
         </section>
     </main>
 </div>
