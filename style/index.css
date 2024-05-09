@@ -42,6 +42,7 @@
     animation: none;
 }
 #hero h1:before {
+    font-family: "Noto Color Emoji", Arial, sans-serif;
     content: "\1F44B Salut, c'est ";
     position: absolute;
     left: -150px;
