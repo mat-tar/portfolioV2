@@ -1,6 +1,6 @@
 import view from "./view.js";
 
-document.addEventListener("scroll", (ev) => {
+document.addEventListener("scroll", () => {
 	if (window.scrollY > 30) {
 		view.navBar.classList.add("scrolled");
 	} else {
