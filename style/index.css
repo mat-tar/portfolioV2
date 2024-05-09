@@ -1,10 +1,17 @@
+/*Root*/
+:root {
+    --background: #F7F7F8;
+    --blue: rgb(123, 211, 234);
+    --transparent-blue: rgb(123, 211, 234, 0.5);
+}
+
 /*Body*/
 body {
     font-family: Arial, sans-serif;
     align-items: center;
     margin: 0;
     padding: 0;
-    background-color: #F7F7F8;
+    background-color: var(--background);
 }
 /*Common*/
 h1 {
@@ -55,10 +62,26 @@ nav ul {
     gap: 50px;
 }
 nav a {
+    position: relative;
     text-decoration: none;
     color: black;
     font-size: 1.2em;
     font-weight: bold;
+}
+nav ul a:before {
+    content: "●";
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    top: 25px;
+    opacity: 0;
+}
+nav ul a:hover:before {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
 }
 /*Hero*/
 #hero {
@@ -74,7 +97,7 @@ nav a {
     margin: 0;
     padding: 10px 20px;
     border-radius: 25px;
-    background-color: rgb(123, 211, 234);
+    background-color: var(--blue);
     animation: jiggle 5s infinite reverse;
     transition: 0.5s;
 }
@@ -88,7 +111,7 @@ nav a {
 }
 #hero h1:hover {
     padding-left: 280px;
-    background-color: rgb(123, 211, 234, 0.5);
+    background-color: var(--transparent-blue);
     animation: none;
     transition: 0.5s;
 }
