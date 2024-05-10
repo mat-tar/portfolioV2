@@ -5,6 +5,9 @@
     --transparent-blue: rgb(123, 211, 234, 0.5);
     --yellow: rgb(249, 250, 171);
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /*Body*/
 body {
@@ -195,11 +198,12 @@ nav ul a:hover:before {
     box-shadow: 0 4px 2px -4px gray;
     transition: 0.5s;
     opacity: 0;
-    z-index: 1;
+    z-index: -1;
 }
 .project h3 {
     margin: 0;
     padding: 10px 20px;
+    text-align: center;
 }
 .project img {
     display: block;
@@ -228,4 +232,25 @@ nav ul a:hover:before {
 .project-active {
     opacity: 1;
     z-index: 1;
+}
+#popup-container {
+    position: relative;
+}
+#popup {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    background-color:rgb(161, 238, 189);
+    width: 300px;
+    border-radius: 25px;
+    padding: 10px;
+    z-index: 100;
+    transition: 0.5s;
+}
+#popup ul {
+    padding: 0;
+}
+#popup li {
+    justify-content: start;
+    align-items: center;
 }

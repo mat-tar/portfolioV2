@@ -66,12 +66,32 @@ view.carouselProject.addEventListener("mouseleave", () => autoMoveId = setInterv
 window.addEventListener('scroll', () => {
 	// Get the current width of the header
 	const headerWidth = view.header.offsetWidth;
-	if (view.navBar.style.width === `${headerWidth}px`) return;
+	// if (view.navBar.style.width === `${headerWidth}px`) return;
 	view.navBar.style.width = `${headerWidth}px`;
 });
 window.addEventListener('resize', () => {
 	// Get the current width of the header
 	const headerWidth = view.header.offsetWidth;
-	if (view.navBar.style.width === `${headerWidth}px`) return;
+	// if (view.navBar.style.width === `${headerWidth}px`) return;
 	view.navBar.style.width = `${headerWidth}px`;
+});
+
+const helpElement = document.querySelector('.help');
+const popupElement = document.querySelector('#popup');
+
+// Add event listeners for mouseenter and mouseleave
+helpElement.addEventListener('mouseenter', () => {
+	popupElement.style.visibility = 'visible';
+	popupElement.animate([
+		{ transform: `translateY(-25px)`, opacity: 0 },
+		{ transform: `translateY(0px)`, opacity: 1 }
+	], animOptions);
+});
+
+helpElement.addEventListener('mouseleave', () => {
+	popupElement.style.visibility = 'hidden';
+	popupElement.animate([
+		{ transform: `translateY(0px)`, opacity: 1 },
+		{ transform: `translateY(-25px)`, opacity: 0 }
+	], animOptions);
 });

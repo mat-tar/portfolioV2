@@ -39,3 +39,6 @@
     background-color: rgb(123, 211, 234);
     transition: 0.3s;
 }
+.small-image {
+    border-radius: 25px !important;
+}

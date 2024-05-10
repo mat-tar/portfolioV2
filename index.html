@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="./style/index.css">
 </head>
 <body class="flex-col">
+<div id="top"></div>
 <div id="pageWrapper" class="flex-col">
     <header>
         <nav class="flex-row no-decoration">
             <div class="flex-row center">
-                <a href="index.html" class="material-icons button house">home</a>
+                <a href="#top" class="material-icons button house">home</a>
                 <ul class="flex-row no-bullets">
-                    <li><a href="index.html">Mes Projets</a></li>
+                    <li><a href="#projects">Mes Projets</a></li>
                     <li><a href="index.html">Mon Parcours</a></li>
                     <li><a href="index.html">Moi</a></li>
                 </ul>
@@ -28,30 +29,40 @@
     <main>
         <section id="hero" class="flex-col center">
             <article class="flex-col">
-                    <h1>Mathéo Tardy</h1>
-                    <div class="flex-row">
-                        <h3>Je suis</h3>
-                        <div id="carousel-complements" class="flex-row">
-                            <ul class="no-bullets">
-                                <li class="complement complementActive">
-                                    <h3>un étudiant en BUT informatique</h3>
-                                </li>
-                                <li class="complement">
-                                    <h3>un futur développeur</h3>
-                                </li>
-                                <li class="complement">
-                                    <h3>un grimpeur passionné</h3>
-                                </li>
-                                <li class="complement">
-                                    <h3>une personne curieuse</h3>
-                                </li>
-                            </ul>
-                        </div>
+                <h1>Mathéo Tardy</h1>
+                <div class="flex-row">
+                    <h3>Je suis</h3>
+                    <div id="carousel-complements" class="flex-row">
+                        <ul class="no-bullets">
+                            <li class="complement complementActive">
+                                <h3>un étudiant en BUT informatique</h3>
+                            </li>
+                            <li class="complement">
+                                <h3>un futur développeur</h3>
+                            </li>
+                            <li class="complement">
+                                <h3>un grimpeur passionné</h3>
+                            </li>
+                            <li class="complement">
+                                <h3>une personne curieuse</h3>
+                            </li>
+                        </ul>
                     </div>
+                </div>
             </article>
         </section>
         <section id="projects" class="flex-col center">
-            <h2>Mes projets</h2>
+            <h2>Mes projets <span class="material-icons help">help</span></h2>
+            <div id="popup-container">
+                <div id="popup" class="flex-row center">
+                    <ul>
+                        <li class="flex-row"><span class="material-icons">group</span>: Nombre de personnes</li>
+                        <li class="flex-row"><span class="material-icons">schedule</span>: Durée du projet (J,S,M)</li>
+                        <li class="flex-row"><span class="material-icons">school</span>: Projet scolaire</li>
+                        <li class="flex-row"><span class="material-icons">home</span>: Projet personnel</li>
+                    </ul>
+                </div>
+            </div>
             <article id="carousel-projects" class="flex-row">
                 <aside class="flex-row center">
                     <button id="prev" class="button">&#10096;</button>
@@ -59,7 +70,8 @@
                 <ul class="no-bullets flex-row">
                     <li class="project project-active flex-col">
                         <img src="img/project/spotapi.png" alt="SpotAPI">
-                        <a href="index.html" class="no-decoration"><h3>SpotAPI 1</h3></a>
+                        <a href="https://mat-tar.github.io/r4a10-tp-api-2024-tardymat-guillevm/" target="_blank"><h3>
+                            SpotAPI</h3></a>
                         <ul class="tech no-bullets flex-row">
                             <li>HTML</li>
                             <li>CSS</li>
@@ -67,99 +79,104 @@
                         </ul>
                         <ul class="details no-bullets flex-row">
                             <li class="material-icons flex-row center">group <span>: 2</span></li>
-                            <li class="material-icons flex-row center">schedule <span>: 2W</span></li>
+                            <li class="material-icons flex-row center">schedule <span>: 2S</span></li>
                             <li class="material-icons">school</li>
                         </ul>
                         <p>
-                            Ce projet avait pour but d'apprendre à utiliser une API. Pour cela, nous avons utilisé
-                            l'API de Spotify pour récupérer des informations sur des artistes, des albums et des
+                            Ce projet avait pour but d'apprendre à utiliser une <strong>API</strong>. Pour cela, nous
+                            avons utilisé
+                            l'API de <strong>Spotify</strong> pour récupérer des informations sur des artistes, des
+                            albums et des
                             chansons. De plus nous avons développé un système de favoris pour sauvegarder les recherches
-                            de l'utilisateur dans le local storage. Enfin, nous avons utilisé un endpoint de l'API pour
-                            permettre à l'utilisateur de contrôler sa musique sur son compte Spotify depuis notre site.
+                            de l'utilisateur dans le <strong>local storage</strong>. Enfin, nous avons utilisé un
+                            endpoint de l'API pour
+                            permettre à l'utilisateur de <strong>contrôler</strong> sa musique sur son compte Spotify
+                            depuis notre site.
                         </p>
                     </li>
                     <li class="project flex-col">
-                        <img src="img/project/spotapi.png" alt="SpotAPI">
-                        <a href="index.html" class="no-decoration"><h3>SpotAPI 2</h3></a>
+                        <img src="img/project/enigmatique2.png" alt="Enigmathique">
+                        <a href="https://enigmathique.com" target="_blank"><h3>Enigmathique</h3></a>
                         <ul class="tech no-bullets flex-row">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Socket</li>
+                            <li>Docker</li>
                         </ul>
                         <ul class="details no-bullets flex-row">
-                            <li class="material-icons flex-row center">group <span>: 2</span></li>
-                            <li class="material-icons flex-row center">schedule <span>: 2W</span></li>
+                            <li class="material-icons flex-row center">group <span>: 8</span></li>
+                            <li class="material-icons flex-row center">schedule <span>: 3M</span></li>
                             <li class="material-icons">school</li>
                         </ul>
                         <p>
-                            Ce projet avait pour but d'apprendre à utiliser une API. Pour cela, nous avons utilisé
-                            l'API de Spotify pour récupérer des informations sur des artistes, des albums et des
-                            chansons. De plus nous avons développé un système de favoris pour sauvegarder les recherches
-                            de l'utilisateur dans le local storage. Enfin, nous avons utilisé un endpoint de l'API pour
-                            permettre à l'utilisateur de contrôler sa musique sur son compte Spotify depuis notre site.
+                            Pour ce projet, nous avons développé un site web ludo-éducatif pour les élèves de seconde.
+                            Le but était de leur permettre de réviser les mathématiques de manière
+                            <strong>ludique</strong>. Pour cela,
+                            nous avons développé un jeu de type <strong>"escape game"</strong> où les élèves doivent
+                            résoudre des énigmes
+                            mathématiques pour progresser. De plus, les énigmes sont affichées dans une salle
+                            <strong>3D</strong> pour
+                            rendre l'expérience plus immersive. Enfin, nous avons aussi développé une interface pour les
+                            professeurs pour qu'ils puissent créer leurs classes et suivre la progression de leurs
+                            élèves.
+                            Le tout est en <strong>temps réel</strong> grâce à l'utilisation de websockets.
+                            À la fin du projet, nous avons présenté notre site devant la promotion et les professeurs et
+                            <strong>avons gagné le prix du meilleur projet</strong>.
                         </p>
                     </li>
                     <li class="project flex-col">
-                        <img src="img/project/spotapi.png" alt="SpotAPI">
-                        <a href="index.html" class="no-decoration"><h3>SpotAPI 3</h3></a>
+                        <img src="img/project/spotapi.png" alt="Carnet de stage">
+                        <a href="index.html" class="no-decoration"><h3>Carnet de stage</h3></a>
                         <ul class="tech no-bullets flex-row">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
+                            <li>Symfony</li>
+                            <li>Android</li>
+                            <li>Docker</li>
                         </ul>
                         <ul class="details no-bullets flex-row">
-                            <li class="material-icons flex-row center">group <span>: 2</span></li>
-                            <li class="material-icons flex-row center">schedule <span>: 2W</span></li>
+                            <li class="material-icons flex-row center">group <span>: 6</span></li>
+                            <li class="material-icons flex-row center">schedule <span>: 1M</span></li>
                             <li class="material-icons">school</li>
                         </ul>
                         <p>
-                            Ce projet avait pour but d'apprendre à utiliser une API. Pour cela, nous avons utilisé
-                            l'API de Spotify pour récupérer des informations sur des artistes, des albums et des
-                            chansons. De plus nous avons développé un système de favoris pour sauvegarder les recherches
-                            de l'utilisateur dans le local storage. Enfin, nous avons utilisé un endpoint de l'API pour
-                            permettre à l'utilisateur de contrôler sa musique sur son compte Spotify depuis notre site.
+                            Le but de ce projet était de reprendre un projet existant afin de
+                            <strong>l'améliorer</strong>. Nous avions
+                            donc
+                            un <strong>back-office</strong> destiné au maître de stage, une <strong>application
+                            android</strong> destinée aux étudiants et
+                            <strong>une base de données</strong>.
+                            Ces trois éléments fonctionnaient déja mais comportaient de nombreux problèmes de
+                            performance, de sécurité et d'ergonomie.
+                            Pour cela, nous avons étudié le code existant puis la base de données existante et avons
+                            identifié les points à améliorer.
+                            Nous avons ainsi appliqué ces améliorations. Nous avons aussi essayé de rendre l'application
+                            plus ergonomique, rapide et
+                            robuste.
                         </p>
                     </li>
                     <li class="project flex-col">
-                        <img src="img/project/spotapi.png" alt="SpotAPI">
-                        <a href="index.html" class="no-decoration"><h3>SpotAPI 4</h3></a>
+                        <img src="img/project/Jaquette_GamJam-IUT.jpg" alt="Game Jam" class="small-image">
+                        <a href="https://github.com/dupuisth/Gamejam_IUT2/" target="_blank"><h3>L'aventure à l'IUT : L'Incroyable Université
+                            Technologique</h3></a>
                         <ul class="tech no-bullets flex-row">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>Pygame</li>
                         </ul>
                         <ul class="details no-bullets flex-row">
-                            <li class="material-icons flex-row center">group <span>: 2</span></li>
-                            <li class="material-icons flex-row center">schedule <span>: 2W</span></li>
+                            <li class="material-icons flex-row center">group <span>: 4</span></li>
+                            <li class="material-icons flex-row center">schedule <span>: 4J</span></li>
                             <li class="material-icons">school</li>
                         </ul>
                         <p>
-                            Ce projet avait pour but d'apprendre à utiliser une API. Pour cela, nous avons utilisé
-                            l'API de Spotify pour récupérer des informations sur des artistes, des albums et des
-                            chansons. De plus nous avons développé un système de favoris pour sauvegarder les recherches
-                            de l'utilisateur dans le local storage. Enfin, nous avons utilisé un endpoint de l'API pour
-                            permettre à l'utilisateur de contrôler sa musique sur son compte Spotify depuis notre site.
-                        </p>
-                    </li>
-                    <li class="project flex-col">
-                        <img src="img/project/spotapi.png" alt="SpotAPI">
-                        <a href="index.html" class="no-decoration"><h3>SpotAPI 5</h3></a>
-                        <ul class="tech no-bullets flex-row">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                        </ul>
-                        <ul class="details no-bullets flex-row">
-                            <li class="material-icons flex-row center">group <span>: 2</span></li>
-                            <li class="material-icons flex-row center">schedule <span>: 2W</span></li>
-                            <li class="material-icons">school</li>
-                        </ul>
-                        <p>
-                            Ce projet avait pour but d'apprendre à utiliser une API. Pour cela, nous avons utilisé
-                            l'API de Spotify pour récupérer des informations sur des artistes, des albums et des
-                            chansons. De plus nous avons développé un système de favoris pour sauvegarder les recherches
-                            de l'utilisateur dans le local storage. Enfin, nous avons utilisé un endpoint de l'API pour
-                            permettre à l'utilisateur de contrôler sa musique sur son compte Spotify depuis notre site.
+                            Ce projet était un jeu vidéo réalisé dans le cadre d'une <strong>Game Jam</strong> parmis
+                            les étudiants de
+                            l'IUT. Le thème était <strong>"Monde fantastique"</strong> et la contrainte était
+                            <strong>"Gardez le rythme"</strong>. Nous avons donc realisé un jeu composé de mini-boss
+                            où le joueur doit garder le rythme pour gagner. Nous avons pris l'univers de l'IUT en
+                            choisissant des
+                            professeurs de l'IUT pour les intégrer dans le jeu en tant que mini-boss. À la fin des 4
+                            jours
+                            de développement, nous avons présenté notre jeu devant toute la promotion. <strong>Nous
+                            avons gagné le
+                            prix du meilleur jeu de la Game Jam.</strong>
                         </p>
                     </li>
                 </ul>
@@ -170,7 +187,6 @@
             <footer>
                 <ul class="no-bullets flex-row center">
                     <li class="dot">&#9679;</li>
-                    <li class="dot">&#9675;</li>
                     <li class="dot">&#9675;</li>
                     <li class="dot">&#9675;</li>
                     <li class="dot">&#9675;</li>
