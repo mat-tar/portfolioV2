@@ -5,6 +5,7 @@
     --transparent-blue: rgb(123, 211, 234, 0.5);
     --yellow: rgb(249, 250, 171);
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -18,27 +19,33 @@ body {
     overflow-x: hidden;
     background-color: var(--background);
 }
+
 /*Common*/
 h1 {
     font-size: 2.5em;
 }
+
 h2 {
     font-size: 2em;
 }
+
 h3 {
     font-size: 1.8em;
 }
+
 /*Page wrapper*/
 #pageWrapper {
     max-width: 90vw;
     min-width: 80vw;
     height: 100%;
 }
+
 /*Header*/
 header {
     height: 100px;
     margin-top: 30px;
 }
+
 /*Navigation*/
 nav {
     align-items: center;
@@ -51,6 +58,7 @@ nav {
     z-index: 100;
     transition: 0.3s;
 }
+
 .scrolled {
     position: fixed;
     top: 0;
@@ -58,15 +66,19 @@ nav {
     border-radius: 0 0 25px 25px;
     transition: 0.3s;
 }
-nav div > a  {
+
+nav div>a {
     margin-left: 10px;
 }
-nav > a {
+
+nav>a {
     margin-right: 10px;
 }
+
 nav ul {
     gap: 50px;
 }
+
 nav a {
     position: relative;
     text-decoration: none;
@@ -74,6 +86,7 @@ nav a {
     font-size: 1.2em;
     font-weight: bold;
 }
+
 nav ul a:before {
     content: "●";
     display: flex;
@@ -84,20 +97,24 @@ nav ul a:before {
     top: 25px;
     opacity: 0;
 }
+
 nav ul a:hover:before {
     opacity: 1;
     visibility: visible;
     transition: 0.5s;
 }
+
 /*Hero*/
 #hero {
     height: 90vh;
 }
+
 #hero article {
     justify-content: center;
     align-items: start;
     width: 560px;
 }
+
 #hero h1 {
     position: relative;
     margin: 0;
@@ -107,20 +124,40 @@ nav ul a:hover:before {
     animation: jiggle 5s infinite reverse;
     transition: 0.5s;
 }
+
 @keyframes jiggle {
-    0% { transform: translateX(0); }
-    5% { transform: translateX(-5px); }
-    10% { transform: translateX(5px); }
-    15% { transform: translateX(-5px); }
-    20% { transform: translateX(5px); }
-    25% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    5% {
+        transform: translateX(-5px);
+    }
+
+    10% {
+        transform: translateX(5px);
+    }
+
+    15% {
+        transform: translateX(-5px);
+    }
+
+    20% {
+        transform: translateX(5px);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
 }
+
 #hero h1:hover {
     padding-left: 280px;
     background-color: var(--transparent-blue);
     animation: none;
     transition: 0.5s;
 }
+
 #hero h1:before {
     font-family: "Noto Color Emoji", Arial, sans-serif;
     position: absolute;
@@ -131,46 +168,56 @@ nav ul a:hover:before {
     width: 280px;
     transition: 0.5s;
 }
+
 #hero h1:hover:before {
     left: 10px;
     opacity: 1;
     visibility: visible;
     transition: 0.5s;
 }
+
 #carousel-complements {
     justify-content: center;
 }
+
 #carousel-complements ul {
     position: relative;
     width: 400px;
     margin: 0;
     padding-left: 7px;
 }
+
 #carousel-complements li {
     white-space: nowrap;
 }
+
 .complement {
     position: absolute;
     transition: 0.5s;
     opacity: 0;
     z-index: -1;
 }
+
 .complementActive {
     opacity: 1;
     z-index: 1;
 }
+
 /*Projects*/
 #projects {
     min-height: 90vh;
     /*align-items: center;*/
 }
+
 #projects footer ul {
     padding: 0;
     gap: 10px;
 }
+
 #carousel-projects {
     justify-content: center;
 }
+
 #carousel-projects aside button {
     height: 40px;
     width: 40px;
@@ -179,7 +226,8 @@ nav ul a:hover:before {
     z-index: 2;
     color: black;
 }
-#carousel-projects > ul {
+
+#carousel-projects>ul {
     position: relative;
     width: 700px;
     height: 700px;
@@ -200,57 +248,94 @@ nav ul a:hover:before {
     opacity: 0;
     z-index: -1;
 }
+
 .project h3 {
     margin: 0;
     padding: 10px 20px;
     text-align: center;
 }
+
 .project img {
     display: block;
-    max-width:100%;
+    max-width: 100%;
     width: auto;
     height: auto;
     border-radius: 25px 25px 0 0;
 }
+
 .project ul {
     padding: 0;
 }
+
 .details {
     gap: 10px;
 }
-.details li{
+
+.details li {
     font-size: 1.3em;
 }
+
 .details li span {
     font-weight: bold;
     font-family: Arial, sans-serif;
 }
+
 .project p {
     text-align: justify;
     max-width: 600px;
 }
+
 .project-active {
     opacity: 1;
     z-index: 1;
 }
+
 #popup-container {
     position: relative;
 }
+
 #popup {
     visibility: hidden;
     position: absolute;
     opacity: 0;
-    background-color:rgb(161, 238, 189);
+    background-color: rgb(161, 238, 189);
     width: 300px;
     border-radius: 25px;
     padding: 10px;
     z-index: 100;
     transition: 0.5s;
 }
+
 #popup ul {
     padding: 0;
 }
+
 #popup li {
     justify-content: start;
     align-items: center;
+}
+
+/* Resume */
+#resume>div {
+    justify-content: space-around;
+}
+
+.resume-element {
+    padding: 0 0 20px 20px;
+    border-left: 2px solid var(--blue);
+    position: relative;
+    background-color: white;
+    border-radius: 0 25px 25px 0;
+}
+
+.resume-element::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -11px;
+    top: 0;
+    background: var(--background);
+    border: 2px solid var(--blue);
 }
