@@ -1,11 +1,25 @@
 import view from "./view.js";
-
+document.addEventListener("DOMContentLoaded", ()=>{
+	const headerWidth = view.header.offsetWidth;
+	view.navBar.style.width = `${headerWidth}px`;
+	if (window.scrollY > 30) {
+		view.navBar.classList.add("scrolled");
+	}
+});
 document.addEventListener("scroll", () => {
 	if (window.scrollY > 30) {
 		view.navBar.classList.add("scrolled");
 	} else {
 		view.navBar.classList.remove("scrolled");
 	}
+
+});
+
+window.addEventListener('resize', () => {
+	// Get the current width of the header
+	const headerWidth = view.header.offsetWidth;
+	// if (view.navBar.style.width === `${headerWidth}px`) return;
+	view.navBar.style.width = `${headerWidth}px`;
 });
 
 const animOptions =  {
@@ -62,19 +76,6 @@ let autoMoveId =  setInterval(() => changePassion('next'), 5000);
 view.carouselProject.addEventListener("mouseenter", () => clearInterval(autoMoveId));
 view.carouselProject.addEventListener("mouseleave", () => autoMoveId = setInterval(() => changePassion('next'), 5000));
 
-// Add a scroll event listener
-window.addEventListener('scroll', () => {
-	// Get the current width of the header
-	const headerWidth = view.header.offsetWidth;
-	// if (view.navBar.style.width === `${headerWidth}px`) return;
-	view.navBar.style.width = `${headerWidth}px`;
-});
-window.addEventListener('resize', () => {
-	// Get the current width of the header
-	const headerWidth = view.header.offsetWidth;
-	// if (view.navBar.style.width === `${headerWidth}px`) return;
-	view.navBar.style.width = `${headerWidth}px`;
-});
 
 const helpElement = document.querySelector('.help');
 const popupElement = document.querySelector('#popup');
