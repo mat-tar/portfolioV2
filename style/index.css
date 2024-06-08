@@ -4,6 +4,7 @@
     --blue: rgb(123, 211, 234);
     --transparent-blue: rgb(123, 211, 234, 0.5);
     --yellow: rgb(249, 250, 171);
+    --green: rgb(161, 238, 189);
 }
 
 html {
@@ -190,7 +191,9 @@ nav ul a:hover:before {
 #carousel-complements li {
     white-space: nowrap;
 }
-
+#carousel-complements h3 {
+    line-height: 1;
+}
 .complement {
     position: absolute;
     transition: 0.5s;
@@ -206,6 +209,7 @@ nav ul a:hover:before {
 /*Projects*/
 #projects {
     min-height: 90vh;
+    padding-top: 100px;
     /*align-items: center;*/
 }
 
@@ -298,7 +302,7 @@ nav ul a:hover:before {
     visibility: hidden;
     position: absolute;
     opacity: 0;
-    background-color: rgb(161, 238, 189);
+    background-color: var(--green);
     width: 300px;
     border-radius: 25px;
     padding: 10px;
@@ -316,19 +320,34 @@ nav ul a:hover:before {
 }
 
 /* Resume */
+#resume {
+    padding-top: 100px;
+}
 #resume>div {
     justify-content: space-around;
 }
 
-.resume-element {
+.resume-element, .first-resume-element {
+    justify-content: space-between;
+    width: 410px;
     padding: 0 0 20px 20px;
     border-left: 2px solid var(--blue);
     position: relative;
     background-color: white;
     border-radius: 0 25px 25px 0;
+    transition: 0.5s;
 }
-
-.resume-element::before {
+.resume-element:hover {
+    width: 450px;
+}
+#resume article {
+    width: 500px;
+}
+.resume-element:hover::before {
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+.resume-element::before{
     content: "";
     position: absolute;
     width: 16px;
@@ -338,4 +357,29 @@ nav ul a:hover:before {
     top: 0;
     background: var(--background);
     border: 2px solid var(--blue);
+    transition: 0.5s;
+}
+.completed-resume-element::before {
+    background: var(--green);
+}
+.first-resume-element::after {
+    content: '\1F680';
+    font-family: 'Noto Color Emoji ', serif;
+    font-size: 24px; /* Adjust size as needed */
+    margin-right: 8px; /* Space between icon and text */
+    position: absolute;
+    top: 95%;
+    left: -11px;
+}
+.resume-element img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100px;
+    margin: 10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.resume-element:hover img {
+    opacity: 1;
+    transition: 0.5s;
 }

@@ -10,6 +10,9 @@
     align-items: center;
     justify-content: center;
 }
+.wrap {
+    flex-wrap: wrap;
+}
 .no-bullets {
     list-style-type: none;
 }
@@ -41,4 +44,7 @@
 }
 .small-image {
     border-radius: 25px !important;
+}
+.emoji {
+    font-family: "Noto Color Emoji", sans-serif;
 }
