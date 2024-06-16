@@ -6,6 +6,9 @@
     display: flex;
     flex-direction: row;
 }
+.evenly {
+    justify-content: space-evenly;
+}
 .center {
     align-items: center;
     justify-content: center;

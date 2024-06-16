@@ -49,18 +49,16 @@ setInterval(changeComplement, 5000);
 
 
 const nbProjects = view.projects.length;
-function changePassion(direction) {
+function changeProject(direction) {
 	const active = document.querySelector(".project-active");
 	const id = [...view.projects].indexOf(active);
 	const newId = (direction === 'next') ? (id + 1) % nbProjects : (id - 1 + nbProjects) % nbProjects;
 	active.classList.remove("project-active");
-	view.dots[id].textContent = "○";
 	active.animate([
 		{ transform: `translateX(0px)`, opacity: 1 },
 		{ transform: `translateX(${direction === 'next' ? 600 : -600}px)`, opacity: 0 }
 	], animOptions);
 	view.projects[newId].classList.add("project-active");
-	view.dots[newId].textContent = "●";
 	view.projects[newId].animate([
 		{ transform: `translateX(${direction === 'next' ? -600 : 600}px)`, opacity: 0 },
 		{ transform: `translateX(0px)`, opacity: 1 }
@@ -68,13 +66,20 @@ function changePassion(direction) {
 
 }
 
-view.nextButton.addEventListener("click", () => changePassion('next'));
-view.prevButton.addEventListener("click", () => changePassion('prev'));
+view.nextButton.addEventListener("click", () => changeProject('next'));
+view.prevButton.addEventListener("click", () => changeProject('prev'));
 
-let autoMoveId =  setInterval(() => changePassion('next'), 5000);
+let autoMoveId =  setInterval(() => changeProject('next'), 5000);
 
-view.carouselProject.addEventListener("mouseenter", () => clearInterval(autoMoveId));
-view.carouselProject.addEventListener("mouseleave", () => autoMoveId = setInterval(() => changePassion('next'), 5000));
+view.carouselProject.addEventListener("mouseenter", () => {
+	console.log("stop");
+	clearInterval(autoMoveId);
+});
+view.carouselProject.addEventListener("mouseleave", () => {
+	console.log("start");
+	autoMoveId = setInterval(() => changeProject('next'), 5000);
+
+});
 
 
 const helpElement = document.querySelector('.help');
@@ -95,4 +100,26 @@ helpElement.addEventListener('mouseleave', () => {
 		{ transform: `translateY(0px)`, opacity: 1 },
 		{ transform: `translateY(-25px)`, opacity: 0 }
 	], animOptions);
+});
+
+// Add a tilting effect to a random passion card every 5 seconds
+const nbPassions = view.passions.length;
+function tiltPassion() {
+	const id = Math.floor(Math.random() * nbPassions);
+	if (view.passions[id].matches(":hover")) return;
+	view.passions[id].animate([
+		{ transform: `rotateY(0deg)` },
+		{ transform: `rotateY(40deg)` },
+		{ transform: `rotateY(0)` }
+	], animOptions);
+}
+
+setInterval(tiltPassion, 5000);
+
+Array.from(view.moreLess).forEach((element) => {
+	element.addEventListener('click', () => {
+		const text = element.previousElementSibling;
+		text.classList.toggle('hide');
+		element.textContent = text.classList.contains('hide') ? 'Voir plus' : 'Voir moins';
+	});
 });

@@ -213,13 +213,10 @@ nav ul a:hover:before {
     /*align-items: center;*/
 }
 
-#projects footer ul {
-    padding: 0;
-    gap: 10px;
-}
 
 #carousel-projects {
     justify-content: center;
+    height: min-content;
 }
 
 #carousel-projects aside button {
@@ -244,13 +241,18 @@ nav ul a:hover:before {
     align-items: center;
     justify-content: start;
     width: 700px;
-    height: 700px;
+    max-height: 750px;
     background-color: white;
     border-radius: 25px;
     box-shadow: 0 4px 2px -4px gray;
     transition: 0.5s;
     opacity: 0;
     z-index: -1;
+}
+.project .button {
+    height: 20px;
+    width: 100px;
+    margin: 10px 0;
 }
 
 .project h3 {
@@ -270,7 +272,9 @@ nav ul a:hover:before {
 .project ul {
     padding: 0;
 }
-
+.hide{
+    display: none;
+}
 .details {
     gap: 10px;
 }
@@ -321,7 +325,7 @@ nav ul a:hover:before {
 
 /* Resume */
 #resume {
-    padding-top: 100px;
+    padding-bottom: 100px;
 }
 #resume>div {
     justify-content: space-around;
@@ -385,6 +389,9 @@ nav ul a:hover:before {
 }
 
 /*Me*/
+#me {
+    padding-top: 100px;
+}
 #me > div {
     gap: 20px;
 }
@@ -393,21 +400,23 @@ nav ul a:hover:before {
     border-radius: 25px;
     background-color: white;
     box-shadow: 0 4px 2px -4px gray;
+    height: min-content;
+}
+#me h3 {
+    margin: 0;
 }
 #me > div > article ul {
     padding: 0;
     gap: 10px;
 }
-#me > div:nth-child(1) {
-    flex: 1;
-    margin: 0 10px;
-}
-#me > div:nth-child(2) {
-    flex: 2;
-    margin: 0 10px;
-}
 #me > div > div {
-    justify-content: space-evenly;
+    max-width: 1000px;
+}
+#me > div > article:last-child li {
+    margin: 10px 0;
+}
+#me > div > article:last-child ul {
+    padding-left: 8px;
 }
 .progress-bar {
     width: 100%;
@@ -423,4 +432,58 @@ nav ul a:hover:before {
     height: 100%;
     border-radius: 100px;
     background-color: var(--green);
+}
+.skill-90 { width: 90%; }
+.skill-80 { width: 80%; }
+.skill-70 { width: 70%; }
+.skill-60 { width: 60%; }
+.skill-50 { width: 50%; }
+.skill-40 { width: 40%; }
+.skill-30 { width: 30%; }
+.skill-20 { width: 20%; }
+
+.card-passion {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card-passion .card-side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.card-passion .card-front {
+    /*background-color: #f0f0f0;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    font-size: 3em;
+    perspective: 1000px;
+}
+
+.card-passion .card-back {
+    /*background-color: #f0f0f0;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1;
+    transform: rotateY(180deg);
+    perspective: 1000px;
+}
+
+.card-passion:hover .card-front, .card-hovered .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card-passion:hover .card-back, .card-back-hovered .card-back {
+    transform: rotateY(0);
 }

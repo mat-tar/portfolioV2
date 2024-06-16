@@ -12,7 +12,10 @@ const view = {
 	navBar: document.querySelector('nav'),
 	header: document.querySelector('header'),
 
-	canvas: document.querySelector('canvas')
+	canvas: document.querySelector('canvas'),
+
+	passions: document.getElementsByClassName('card-passion'),
+	moreLess: document.getElementsByClassName('more-less'),
 }
 
 export default view;
