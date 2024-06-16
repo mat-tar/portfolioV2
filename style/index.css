@@ -87,6 +87,16 @@ nav a {
     font-size: 1.2em;
     font-weight: bold;
 }
+nav div:last-child {
+    margin-right: 10px;
+    gap: 10px;
+}
+nav img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+}
 
 nav ul a:before {
     content: "●";
@@ -464,6 +474,7 @@ nav ul a:hover:before {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     line-height: 1;
     font-size: 3em;
     perspective: 1000px;
