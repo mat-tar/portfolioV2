@@ -420,7 +420,7 @@ nav ul a:hover:before {
     gap: 10px;
 }
 #me > div > div {
-    max-width: 1000px;
+    max-width: 600px;
 }
 #me > div > article:last-child li {
     margin: 10px 0;
